@@ -1,0 +1,39 @@
+@Entity
+public class Game {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private List<Player> players;
+    private QuestionBank questionBank;
+    // getters and setters
+}
+
+@Entity
+public class Player {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String name;
+    private int score;
+    // getters and setters
+}
+
+@Entity
+public class Question {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String text;
+    private List<String> options;
+    private int correctAnswerIndex;
+    // getters and setters
+}
+
+@Entity
+public class QuestionBank {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private List<Question> questions;
+    // getters and setters
+}
