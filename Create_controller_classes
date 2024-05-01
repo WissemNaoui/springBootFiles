@@ -1,0 +1,26 @@
+@RestController
+@RequestMapping("/api")
+public class GameController {
+    @Autowired
+    private GameService gameService;
+
+    @PostMapping("/start-game")
+    public void startGame(@RequestBody Game game) {
+        gameService.startGame(game);
+    }
+
+    @PostMapping("/add-player")
+    public void addPlayer(@RequestBody Player player) {
+        gameService.addPlayer(player);
+    }
+
+    @PostMapping("/answer-question")
+    public void answerQuestion(@RequestBody Player player, @RequestParam int answerIndex) {
+        gameService.presentQuestion(player);
+    }
+
+    @PostMapping("/update-score")
+    public void updateScore(@RequestBody Player player, @RequestParam int points) {
+        gameService.updateScore(player, points);
+    }
+}
