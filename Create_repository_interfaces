@@ -1,0 +1,15 @@
+public interface GameRepository extends JpaRepository<Game, Long> {
+    List<Game> findAll();
+}
+
+public interface PlayerRepository extends JpaRepository<Player, Long> {
+    List<Player> findAll();
+}
+
+public interface QuestionRepository extends JpaRepository<Question, Long> {
+    List<Question> findAll();
+}
+
+public interface QuestionBankRepository extends JpaRepository<QuestionBank, Long> {
+    List<QuestionBank> findAll();
+}
