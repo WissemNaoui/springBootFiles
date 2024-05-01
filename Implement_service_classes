@@ -1,0 +1,27 @@
+@Service
+public class GameService {
+    @Autowired
+    private GameRepository gameRepository;
+    @Autowired
+    private PlayerRepository playerRepository;
+    @Autowired
+    private QuestionRepository questionRepository;
+    @Autowired
+    private QuestionBankRepository questionBankRepository;
+
+    public void startGame(Game game) {
+        // implement game starting logic
+    }
+
+    public void addPlayer(Player player) {
+        // implement player adding logic
+    }
+
+    public void presentQuestion(Player player) {
+        // implement question presenting logic
+    }
+
+    public void updateScore(Player player, int points) {
+        // implement score updating logic
+    }
+}
